@@ -136,7 +136,17 @@
     }
 
     .footer-image {
-      width: 100%;
+      width: 100vw;
+      height: 140px;
+      object-fit: cover;
+      display: block;
+      margin: 0 -20px;
+    }
+
+    @media (min-width: 768px) {
+      .footer-image {
+        height: 180px;
+      }
     }
   </style>
 </head>
@@ -150,64 +160,5 @@
     <p class="subtitle">Official Links</p>
 
     <section class="links">
-      <a class="link disabled">
-        Local Flood Guide (Coming Soon)
-      </a>
-
-      <a class="link secondary"
-         href="https://www.ses.vic.gov.au/join-us"
-         target="_blank">
-        Become an SES Volunteer
-      </a>
-
       <a class="link"
-         href="https://www.ses.vic.gov.au/"
-         target="_blank">
-        Visit the SES Website
-      </a>
-    </section>
-
-    <div class="socials">
-      <a class="social"
-         href="https://www.facebook.com/profile.php?id=100069607524695"
-         target="_blank"
-         aria-label="Facebook">
-        <svg viewBox="0 0 24 24">
-          <path d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-3h2.5V9.5c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.7-1.6 1.5V12H16l-.4 3h-2.6v7A10 10 0 0 0 22 12"/>
-        </svg>
-      </a>
-
-      <a class="social"
-         href="https://www.instagram.com/"
-         target="_blank"
-         aria-label="Instagram">
-        <svg viewBox="0 0 24 24">
-          <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5.8a4.2 4.2 0 1 0 0 8.4 4.2 4.2 0 0 0 0-8.4zM17.5 6.5a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
-        </svg>
-      </a>
-
-      <a class="social"
-         href="mailto:morwell@ses.vic.gov.au"
-         aria-label="Email">
-        <svg viewBox="0 0 24 24">
-          <path d="M2 4h20v16H2V4zm10 7 8-5H4l8 5zm0 2-8-5v10h16V8l-8 5z"/>
-        </svg>
-      </a>
-    </div>
-
-    <p class="disclaimer">
-      In case of an emergency call <strong>000</strong>.<br>
-      VICSES social media is not monitored regularly.
-    </p>
-
-    <footer class="footer">
-      Victoria State Emergency Service · Morwell Unit
-    </footer>
-
-    <img src="footer.png"
-         alt="Victoria State Emergency Service – Safer Communities Together"
-         class="footer-image" />
-
-  </main>
-</body>
-</html>
+         href="https
