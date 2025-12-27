@@ -1,47 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Morwell SES</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <style>
+    :root {
+      --bg: #f57c00;
+      --card-bg: #ffffff;
+      --text-dark: #222;
+      --text-light: #ffffff;
+      --accent: #111;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      background: #f57c00;
+      min-height: 100vh;
+      background: linear-gradient(180deg, #f57c00 0%, #ef6c00 100%);
       font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 420px;
+      padding: 28px 20px 40px;
       text-align: center;
     }
-    .container {
-      max-width: 420px;
-      margin: auto;
-      padding: 40px 20px;
+
+    .header {
+      margin-bottom: 28px;
     }
-    h1, p {
-      color: white;
+
+    .title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--text-light);
+      margin: 0 0 6px;
     }
-    a {
-      display: block;
-      background: white;
-      color: black;
+
+    .subtitle {
+      font-size: 0.95rem;
+      color: rgba(255, 255, 255, 0.9);
+      margin: 0;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .link {
+      background: var(--card-bg);
+      color: var(--text-dark);
       text-decoration: none;
-      padding: 14px;
-      margin: 12px 0;
-      border-radius: 10px;
+      padding: 16px 18px;
+      border-radius: 14px;
+      font-size: 1rem;
       font-weight: 600;
+      box-shadow:
+        0 6px 18px rgba(0, 0, 0, 0.12);
+      transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+    }
+
+    .link:hover {
+      transform: translateY(-2px);
+      box-shadow:
+        0 10px 24px rgba(0, 0, 0, 0.18);
+    }
+
+    .footer {
+      margin-top: 36px;
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.7);
     }
   </style>
 </head>
+
 <body>
+  <main class="page">
+    <header class="header">
+      <h1 class="title">Morwell SES</h1>
+      <p class="subtitle">Official links and information</p>
+    </header>
 
-  <div class="container">
-    <h1>Morwell SES</h1>
-    <p>Official links</p>
+    <section class="links">
+      <a class="link" href="https://www.facebook.com/">Facebook</a>
+      <a class="link" href="https://www.instagram.com/">Instagram</a>
+      <a class="link" href="https://www.ses.vic.gov.au/">SES Website</a>
+    </section>
 
-    <a href="https://www.facebook.com/">Facebook</a>
-    <a href="https://www.instagram.com/">Instagram</a>
-    <a href="https://www.ses.vic.gov.au/">SES Website</a>
-  </div>
-
+    <footer class="footer">
+      Victoria State Emergency Service
+    </footer>
+  </main>
 </body>
 </html>
-
