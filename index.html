@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Morwell SES</title>
+  <title>SES Morwell</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
     :root {
-      --bg: #f57c00;
+      --bg: #f7f6f2;
       --card-bg: #ffffff;
-      --text-dark: #222;
-      --text-light: #ffffff;
-      --accent: #111;
+      --text-dark: #1f1f1f;
+      --accent: #f57c00;
+      --muted: #bdbdbd;
     }
 
     * {
@@ -21,7 +21,7 @@
     body {
       margin: 0;
       min-height: 100vh;
-      background: linear-gradient(180deg, #f57c00 0%, #ef6c00 100%);
+      background: var(--bg);
       font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
       display: flex;
       justify-content: center;
@@ -31,24 +31,26 @@
     .page {
       width: 100%;
       max-width: 420px;
-      padding: 28px 20px 40px;
+      padding: 32px 20px 40px;
       text-align: center;
     }
 
-    .header {
-      margin-bottom: 28px;
+    .logo {
+      width: 180px;
+      max-width: 90%;
+      margin-bottom: 20px;
     }
 
     .title {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       font-weight: 700;
-      color: var(--text-light);
+      color: var(--text-dark);
       margin: 0 0 6px;
     }
 
     .subtitle {
       font-size: 0.95rem;
-      color: rgba(255, 255, 255, 0.9);
+      color: #555;
       margin: 0;
     }
 
@@ -67,43 +69,72 @@
       border-radius: 14px;
       font-size: 1rem;
       font-weight: 600;
-      box-shadow:
-        0 6px 18px rgba(0, 0, 0, 0.12);
-      transition:
-        transform 0.15s ease,
-        box-shadow 0.15s ease;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
 
     .link:hover {
       transform: translateY(-2px);
-      box-shadow:
-        0 10px 24px rgba(0, 0, 0, 0.18);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+    }
+
+    .link.secondary {
+      border: 2px solid var(--accent);
+      background: white;
+    }
+
+    .link.disabled {
+      background: #eeeeee;
+      color: #777;
+      box-shadow: none;
+      cursor: default;
+    }
+
+    .link.disabled:hover {
+      transform: none;
+      box-shadow: none;
     }
 
     .footer {
       margin-top: 36px;
       font-size: 0.75rem;
-      color: rgba(255, 255, 255, 0.7);
+      color: #777;
     }
   </style>
 </head>
 
 <body>
   <main class="page">
-    <header class="header">
-      <h1 class="title">Morwell SES</h1>
-      <p class="subtitle">Official links and information</p>
-    </header>
+
+    <img src="logo.png" alt="SES Morwell – Paddy Platypus" class="logo" />
+
+    <h1 class="title">SES Morwell</h1>
+    <p class="subtitle">Official links and community information</p>
 
     <section class="links">
-      <a class="link" href="https://www.facebook.com/">Facebook</a>
-      <a class="link" href="https://www.instagram.com/">Instagram</a>
-      <a class="link" href="https://www.ses.vic.gov.au/">SES Website</a>
+      <a class="link" href="https://www.facebook.com/" target="_blank">
+        Facebook
+      </a>
+
+      <a class="link" href="https://www.instagram.com/" target="_blank">
+        Instagram
+      </a>
+
+      <a class="link disabled">
+        Local Flood Guide (Coming Soon)
+      </a>
+
+      <a class="link secondary"
+         href="https://www.ses.vic.gov.au/join-us"
+         target="_blank">
+        Become an SES Volunteer
+      </a>
     </section>
 
     <footer class="footer">
-      Victoria State Emergency Service
+      Victoria State Emergency Service · Morwell Unit
     </footer>
+
   </main>
 </body>
 </html>
